@@ -1,8 +1,0 @@
-endpoint{ "https://api.coindesk.com",
-	  user = "per",
-	  password = "olsen"	
-	 }
-
-endpoint{ "https://nrk.no",
-  	user = "kjetil",
-  	password = "midtlie" }
