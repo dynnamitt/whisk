@@ -19,12 +19,13 @@ task{ "gen_list",
 -- http_task{} -- nice to have to remove dep on curl 
 
 
-function zippit(changes,statuses)
-	y = 1+3
-end
 
 function work_json(result,file_deps,etc)
 	x = 1+1
+end
+
+function zippit(changes,statuses)
+	y = 1+3
 end
 
 aws_task{
@@ -35,4 +36,6 @@ aws_task{
 	zip = zippit,
   cmds = {"{{result}} > /tmp/debug-res.json", work_json }
 }
+
+
 
