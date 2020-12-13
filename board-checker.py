@@ -3,6 +3,10 @@ my_board1 = ["x", "o", "x",
             "x", "x", "o",
             None, "o", "x"]
 
+my_board1b = ["x", "o", "u",
+            None, "u", "o",
+            "u", "o", None]
+
 my_board2 = ["e", "o", "x",
             "e", None, "o",
             "e",  "o", None]
@@ -22,9 +26,9 @@ def diagonal_result(board: list, dir="L") -> str:
     if dir == "L":
         start = 0
         jumps = [4, 8]
-    else:
+    else: # "R"
         start = 2
-        jumps = [2, 2]
+        jumps = [2, 4]
 
     if board[start] == board[start+jumps[0]] == board[start+jumps[1]]:
         return board[start]
@@ -52,4 +56,6 @@ def check_all(board: list) -> str:
 print("-------------------------------------------------")
 print("1st Winner is: ", check_all(my_board1))
 print("-------------------------------------------------")
-print("2nd Winner is: ", check_all(my_board2))
+print("2st Winner is: ", check_all(my_board1b))
+print("-------------------------------------------------")
+print("3nd Winner is: ", check_all(my_board2))
