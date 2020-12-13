@@ -15,6 +15,8 @@ my_board2 = ["e", "o", "x",
 def horiz_result(board: list, start: int) -> str:
     if board[start] == board[start+1] == board[start+2]:
         return board[start]
+    else:
+        return None # mypy not happy ..
 
 
 def vert_result(board: list, start: int) -> str:
